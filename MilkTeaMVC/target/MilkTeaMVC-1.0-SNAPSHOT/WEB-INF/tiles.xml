@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache
+        Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <definition name="baseLayout" template="/WEB-INF/layout/base.jsp" >
+        <put-attribute name="title" value="Demo"/>
+        <put-attribute name="header" value="/WEB-INF/layout/header.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp"/>
+        <put-attribute name="content" value="Demo content"/>
+    </definition>
+    
+    <definition name="baseAdmin" template="/WEB-INF/layout/admin_base.jsp" >
+        <put-attribute name="title" value="Demo"/>
+        <put-attribute name="admin_side_bar" value="/WEB-INF/layout/admin_side_bar.jsp"/>
+        <put-attribute name="admin_header" value="/WEB-INF/layout/admin_header.jsp"/>
+        <put-attribute name="admin_content" value="Demo content"/>
+    </definition>
+    <definition name="admin" extends="baseAdmin" >
+        <put-attribute name="title" value="Demo"/>
+        <put-attribute name="admin_side_bar" value="/WEB-INF/layout/admin_side_bar.jsp"/>
+        <put-attribute name="admin_header" value="/WEB-INF/layout/admin_header.jsp"/>
+        <put-attribute name="admin_content" value="/WEB-INF/jsp/admin.jsp"/>
+    </definition>
+    
+    <definition name="index" extends = "baseLayout">
+        <put-attribute name="title" value="Trang chủ"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/index.jsp"/>
+    </definition>
+    <definition name="login" extends="baseLayout">
+        <put-attribute name="title" value="Đăng nhập" />
+        <put-attribute name="header" value=""/>
+        <put-attribute name="footer" value=""/>
+        <put-attribute name="content" value="/WEB-INF/jsp/login.jsp" />
+    </definition>
+    <definition name="order" extends="baseLayout">
+        <put-attribute name="title" value="order" />
+        <put-attribute name="content" value="/WEB-INF/jsp/order.jsp" />
+    </definition>
+    <definition name="cart" extends="baseLayout">
+        <put-attribute name="title" value="cart" />
+        <put-attribute name="content" value="/WEB-INF/jsp/cart.jsp" />
+    </definition>
+</tiles-definitions>
